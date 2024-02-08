@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Formulaire de commande de chocolat</h2>
+    <form action="/traitement-du-formulaire" method="post">
+      <label for="quantite_chocolat">Quantité de chocolat :</label>
+      <select id="quantite_chocolat" name="quantite_chocolat">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      <br /><br />
+      <input type="submit" value="Envoyer" />
+    </form>
+  </body>
+</html>
