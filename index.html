@@ -1,33 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <style>
-      /* Style pour la navbar fixe */
-      .navbar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background-color: #333;
-        color: #fff;
-        padding: 10px 20px;
-        box-sizing: border-box;
-      }
-      /* Style pour le bouton de commande */
-      .command-button {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        padding: 10px 20px;
-        background-color: #007bff;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <title>PESF</title>
   </head>
   <body>
+    <nav>
+      <a href="#">
+        <img src="logo.png" alt="Logo" style="width: 40px" />
+      </a>
+      <div>
+        <ul>
+          <li>
+            <a class="active" href="index.html">Accueil</a>
+          </li>
+          <li>
+            <a href="edition.html">Édition</a>
+          </li>
+          <li>
+            <a href="visualisation.html">Visualisation</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
     <!-- Section pour la navbar -->
     <section class="navbar">
       Mettre ici la navbar du site (éléments de navigation)
@@ -39,7 +38,7 @@
 
     <!-- Section pour le bouton pour remplir le formulaire -->
     <section>
-      <button class="fill-form-button">Remplir le formulaire</button>
+      <button href="formulaire.html">Remplir le formulaire</button>
     </section>
   </body>
 </html>
