@@ -3,9 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <title>PESF</title>
   </head>
   <body>
+    <nav>
+      <a href="#">
+        <img
+          src="assets/img/logo.png"
+          alt="Logo"
+          style="width: 60px; margin: 10px"
+        />
+      </a>
+      <div>
+        <ul>
+          <li>
+            <a class="active" href="index.html">Accueil</a>
+          </li>
+          <li>
+            <a href="formulaire.html">Acheter</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
     <h2>Formulaire de commande de chocolat</h2>
     <form action="/traitement-du-formulaire" method="post">
       <label for="quantite_chocolat">Quantité de chocolat :</label>
