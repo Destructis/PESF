@@ -29,7 +29,9 @@
       </div>
     </nav>
     <h2>Formulaire de commande de chocolat</h2>
-    <form action="/traitement-du-formulaire" method="post">
+    
+    <form id="myForm" action="/traitement-du-formulaire" method="post">
+      <div class="left">
       <label for="OeufGarni13Noir">Oeuf Garni 13cm Noir</label>
       <select id="OeufGarni13Noir" name="OeufGarni13Noir">
         <option value="0">0</option>
@@ -139,7 +141,9 @@
         <option value="4">4</option>
         <option value="5">5</option>
       </select>
-      <br /><br />
+      <br><br>
+    </div>
+    <div class="right">
       <label for="PouleOeufsLait"
         >La poule et ses oeufs (Chocolat au lait)</label
       >
@@ -241,9 +245,32 @@
         <option value="4">4</option>
         <option value="5">5</option>
       </select>
+    </div>
+  </form>
       <br /><br />
 
       <input type="submit" value="Envoyer" />
+      <button id="downloadPDF">Télécharger PDF</button>
     </form>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script>
+       window.addEventListener('DOMContentLoaded', (event) => {
+      document.getElementById('downloadPDF').addEventListener('click', function () {
+        const formData = new FormData(document.getElementById('myForm'));
+        const pdf = new jsPDF();
+  
+        // Formatage des données du formulaire dans le PDF
+        let y = 10;
+        formData.forEach((value, key) => {
+          pdf.text(20, y, `${key}: ${value}`);
+          y += 10;
+        });
+  
+        // Téléchargement du PDF
+        pdf.save('formulaire.pdf');
+      });
+    });
+    </script>
   </body>
 </html>

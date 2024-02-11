@@ -42,7 +42,9 @@ nav li {
 main {
 }
 form {
+  display: flex;
 }
+
 footer {
   position: absolute;
   bottom: 0px;
